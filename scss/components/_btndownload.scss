@@ -1,0 +1,11 @@
+.btndown {
+    color: white;
+    padding: 10px;
+    background-color: $btncolor;
+    border: inset 8px green;
+    text-decoration: none;
+    @extend %fontMinecraftia;
+    &:hover{
+        color: white;
+    }
+}

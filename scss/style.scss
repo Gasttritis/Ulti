@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'minecraftfont';
+    src: url('../fonts/minecraftfont/minecraftfont.eot');
+    src: local('minecraftfont'), url('../fonts/minecraftfont/minecraftfont.woff') format('woff'), url('../fonts/minecraftfont/minecraftfont.ttf') format('truetype');
+}
+
+/* 
+font-family: 'minecraftfont';
+font-family: 'Minecraft', sans-serif;
+font-family: 'Minecrafter', sans-serif;
+font-family: 'Minecrafter Alt', sans-serif;
+font-family: 'Minecraftia', sans-serif; 400 700
+*/
+
+/* Global */
+
+@import "./base/variables";
+@import "./base/maps";
+@import "./base/mixin";
+@import "./base/extends";
+
+.minecraftFont {
+    font-family: 'minecraftfont' !important;
+}
+
+* {
+    color: rgb(199, 195, 195);
+}
+
+body {
+    @extend %fontMinecraftia;
+    background: url(../img/DirtBackground.jpg);
+    @include bgprop(fixed, contain);
+}
+
+footer {
+    font-family: 'Minecraft', sans-serif;
+}
+
+/* index */
+
+@import "./components/nav";
+@import "./components/cards";
+
+/* pages */
+
+@import "./components/btndownload";
+
+.pg-text {
+    padding: 20px;
+}
+
+.pg-text ol {
+    list-style: map-get($list, stylenone);
+}
+
+.images-textures {
+    div {
+        img {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+}
+
+
+.list-group-item-mod {
+    background-color: map-get($list, bgcolor);
+    color: map-get($list, color);
+}
+
+.form-control {
+    background-color: #212529;
+}
+
+.embed-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

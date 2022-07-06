@@ -1,0 +1,4 @@
+@mixin bgprop($attachment, $size) {
+    background-attachment: $attachment;
+    background-size: $size;
+}

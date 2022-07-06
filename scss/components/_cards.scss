@@ -1,0 +1,16 @@
+.imgdownanim{
+    &:hover{
+        -webkit-transform:scale(1.03);
+        transform:scale(1.03);
+        transition: transform 0.3s;
+    }
+}
+
+.card-mod{
+    border: none;
+    background-color: rgba(0,0,0, 0.4);
+}
+
+.col-mod{
+    padding: 24px;
+}
